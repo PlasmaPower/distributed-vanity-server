@@ -2,5 +2,6 @@
     "name": "My miner",
     "demand": "none",
     "maxCharacters": 5,
+    "port": 2000,
     "nanoVanityCommand": ["/path/to/nano-vanity/target/release/nano-vanity", "--threads", "6", "--gpu"]
 }

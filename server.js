@@ -145,4 +145,4 @@ server.use(restify.plugins.queryParser());
 server.get("/v1/info", info);
 server.get("/v1/poll", poll);
 
-server.listen(2000, () => console.log("Started up"));
+server.listen(config.port, () => console.log("Started up"));
