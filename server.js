@@ -40,6 +40,7 @@ function processRequest(basePublicKey, prefix) {
                 let key = result.slice(0, result.indexOf(" "));
                 if (!validKeyRegex.test(key)) {
                     reject(new Error("nano-vanity returned invalid key. Result: " + result));
+                    return;
                 }
                 console.error("Mining complete!");
                 resolve(key);
@@ -125,6 +126,7 @@ function poll(req, res, next) {
     const statusKey = basePublicKey + prefix;
     if (!requestStatuses.hasOwnProperty(statusKey)) {
         requestStatuses[statusKey] = {};
+        console.log("Prefix requested: " + prefix);
         queueRequest(basePublicKey, prefix);
     }
     res.json(requestStatuses[statusKey]);
