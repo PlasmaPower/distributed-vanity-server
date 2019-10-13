@@ -100,8 +100,8 @@ function countBitsInPrefix(prefix) {
 
 function info(req, res, next) {
     res.json({
-        name: "miner name",
-        demand: "none",
+        name: config.name,
+        demand: config.demand,
         maxBits
     });
     return next();
