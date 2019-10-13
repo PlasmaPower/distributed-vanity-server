@@ -1,0 +1,14 @@
+{
+  "name": "distributed-vanity-server",
+  "version": "0.1.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "author": "Lee Bousfield <ljbousfield@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "restify": "^8.4.0"
+  }
+}
